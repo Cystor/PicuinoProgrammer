@@ -30,8 +30,8 @@ Compatible with many PIC devices which has:
 
 - Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
--- pp3.exe
-- - pp3_devices.dat
+['pp3.exe'](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
+'[pp3_devices.dat]'(https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
 
 `pp3.exe`
 `pp3_devices.dat`
