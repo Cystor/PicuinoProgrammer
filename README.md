@@ -25,16 +25,17 @@ Use at your own risk, WE DO NOT PROVIDE GUARANTEE of any kind of malfunction or 
 
 ## How to use it?
 
-### Before anything, you must setup your hardware. [Click here to see how;](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
+Before anything, you must setup your hardware. [Click here to see how;](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
 
-### You need to upload the sketch to the Arduino;
+You need to upload the sketch to the Arduino;
 
-### Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
+Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
-- - [pp3.exe](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
-- - [pp3_devices.dat](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
+- [pp3.exe](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
+- [pp3_devices.dat](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
 
-### Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device".
+Run "PicuinoProgrammer.exe".
+Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device".
 
 ## Help us
 
