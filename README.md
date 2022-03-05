@@ -27,8 +27,8 @@ Before anything, you must setup your hardware. Go to [Micro progmeter](https://g
 
 Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
--`pp3.exe`
--`pp3_devices.dat`
+`pp3.exe`
+`pp3_devices.dat`
 
 Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device"
 
