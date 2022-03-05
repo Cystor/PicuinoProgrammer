@@ -2,7 +2,8 @@
 
 ## What is it?
 
-This application was created in Lazarus on Windows (and in the future for linux distros too) with the aim to help to program 8-bit PIC devices more easily from serial port through AVR (Arduino), which it is low cost and also very available. It's a user interface to the executable [Micro progmeter](https://github.com/jaromir-sukuba/micro_progmeter) and needs some files of that project to work (see more below).
+This application was created in Lazarus on Windows (and in the future for linux distros too) with the aim to help to program 8-bit PIC devices more easily from serial port through AVR (Arduino), which it is low cost and also very available. It's a user interface to the executable [a-p-prog
+](https://github.com/jaromir-sukuba/a-p-prog) and needs some files of that project to work (see more below).
 
 ![preview](https://user-images.githubusercontent.com/74105086/156858529-0c2b3ac1-662b-43c9-9e55-643fdca54aba.png)
 
