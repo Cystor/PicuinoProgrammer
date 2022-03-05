@@ -1,0 +1,478 @@
+object F_Main: TF_Main
+  Left = 256
+  Height = 310
+  Top = 145
+  Width = 520
+  AllowDropFiles = True
+  AlphaBlend = True
+  AlphaBlendValue = 245
+  Caption = 'Picuino Programmer V1'
+  ClientHeight = 290
+  ClientWidth = 520
+  Constraints.MinHeight = 310
+  Constraints.MinWidth = 485
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDropFiles = FormDropFiles
+  OnShow = FormShow
+  Position = poDesktopCenter
+  SessionProperties = 'AlphaBlend;Bar1.Visible;CBCom.ItemIndex;CBCom.Items;CBCom.Text;CBDev.ItemIndex;CBDev.Items;CBDev.Text;Constraints;Constraints;EditFilePath1.Text;Height;Height;MIAlphaEffect.Checked;MIDebug1.Checked;MIDebug2.Checked;MIDebug3.Checked;MIDebug4.Checked;MIDelay1700.Checked;MIDelay2000.Checked;MIDelay2500.Checked;MIDelay3000.Checked;MIDelay500.Checked;MIDelayNone.Checked;MIEnableBar.Checked;MINewProg.Checked;MIShowCheck.Checked;MIShowProgram.Checked;VLEDevice.Strings;Width;WindowState;MIDebug0.Checked;MIEnableTable.Checked;MIShowIn.Checked;MIShowOut.Checked'
+  LCLVersion = '2.0.6.0'
+  object GroupBox1: TGroupBox
+    Left = 4
+    Height = 79
+    Top = 4
+    Width = 512
+    Align = alTop
+    BorderSpacing.Around = 4
+    Caption = ' Configuration '
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.TopBottomSpacing = 4
+    ClientHeight = 59
+    ClientWidth = 508
+    TabOrder = 0
+    object PanelDevice: TPanel
+      Left = 4
+      Height = 23
+      Top = 32
+      Width = 500
+      Align = alBottom
+      BevelOuter = bvNone
+      ChildSizing.HorizontalSpacing = 4
+      ClientHeight = 23
+      ClientWidth = 500
+      TabOrder = 1
+      object CBDev: TComboBox
+        Left = 54
+        Height = 23
+        Top = 0
+        Width = 180
+        Align = alClient
+        AutoComplete = True
+        AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+        ItemHeight = 15
+        OnChange = CBDevChange
+        OnDropDown = CBDevDropDown
+        OnSelect = CBDevSelect
+        Sorted = True
+        Style = csDropDownList
+        TabOrder = 0
+      end
+      object CBCom: TComboBox
+        Left = 302
+        Height = 23
+        Top = 0
+        Width = 72
+        Align = alRight
+        ItemHeight = 15
+        OnDropDown = CBComDropDown
+        Style = csDropDownList
+        TabOrder = 1
+      end
+      object BtnWriteDev: TButton
+        Left = 378
+        Height = 23
+        Top = 0
+        Width = 122
+        Align = alRight
+        Caption = 'Program PIC Device'
+        OnClick = BtnWriteDevClick
+        TabOrder = 2
+      end
+      object Label1: TLabel
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 50
+        Align = alLeft
+        AutoSize = False
+        Caption = 'Device'
+        Layout = tlCenter
+        ParentColor = False
+      end
+      object Label2: TLabel
+        Left = 238
+        Height = 23
+        Top = 0
+        Width = 60
+        Align = alRight
+        AutoSize = False
+        Caption = 'Serial Port'
+        Layout = tlCenter
+        ParentColor = False
+      end
+    end
+    object PanelFile: TPanel
+      Left = 4
+      Height = 23
+      Top = 4
+      Width = 500
+      Align = alTop
+      BevelOuter = bvNone
+      ChildSizing.HorizontalSpacing = 4
+      ClientHeight = 23
+      ClientWidth = 500
+      TabOrder = 0
+      object BtnSearch: TButton
+        Left = 378
+        Height = 23
+        Top = 0
+        Width = 122
+        Align = alRight
+        Caption = 'Search Hex File'
+        OnClick = BtnSearchClick
+        TabOrder = 1
+      end
+      object EditFilePath1: TEdit
+        Left = 54
+        Height = 23
+        Top = 0
+        Width = 320
+        Align = alClient
+        TabOrder = 0
+      end
+      object Label3: TLabel
+        Left = 0
+        Height = 23
+        Top = 0
+        Width = 50
+        Align = alLeft
+        AutoSize = False
+        Caption = 'File path'
+        Layout = tlCenter
+        ParentColor = False
+      end
+    end
+  end
+  object PanelStatus: TPanel
+    Left = 0
+    Height = 23
+    Top = 267
+    Width = 520
+    Align = alBottom
+    BevelInner = bvRaised
+    BevelOuter = bvLowered
+    ChildSizing.LeftRightSpacing = 4
+    ChildSizing.HorizontalSpacing = 4
+    ClientHeight = 23
+    ClientWidth = 520
+    TabOrder = 2
+    object LblStatus: TLabel
+      Left = 410
+      Height = 19
+      Top = 2
+      Width = 104
+      Align = alRight
+      Alignment = taRightJustify
+      Caption = 'Waiting commands'
+      ParentColor = False
+    end
+  end
+  object PanelCenter: TPanel
+    Left = 0
+    Height = 180
+    Top = 87
+    Width = 520
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 180
+    ClientWidth = 520
+    TabOrder = 1
+    object Memo1: TMemo
+      Left = 190
+      Height = 132
+      Top = 0
+      Width = 330
+      Align = alClient
+      Color = clForm
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 0
+    end
+    object Bar1: TProgressBar
+      Left = 0
+      Height = 48
+      Top = 132
+      Width = 520
+      Align = alBottom
+      TabOrder = 1
+    end
+    object PanelCenterLeft: TPanel
+      Left = 0
+      Height = 132
+      Top = 0
+      Width = 190
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 132
+      ClientWidth = 190
+      TabOrder = 2
+      object VLEDevice: TValueListEditor
+        Left = 0
+        Height = 132
+        Top = 0
+        Width = 190
+        Align = alTop
+        AutoEdit = False
+        BorderStyle = bsNone
+        DefaultColWidth = 95
+        FixedCols = 0
+        RowCount = 1
+        ScrollBars = ssNone
+        TabOrder = 0
+        TitleStyle = tsNative
+        UseXORFeatures = True
+        DisplayOptions = [doAutoColResize, doKeyColFixed]
+        Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goAlwaysShowEditor, goThumbTracking, goRowHighlight]
+        TitleCaptions.Strings = (
+          'Propriedade'
+          'Valor'
+        )
+      end
+    end
+  end
+  object LazSerial1: TLazSerial
+    Active = False
+    BaudRate = br_57600
+    DataBits = db8bits
+    Parity = pNone
+    FlowControl = fcNone
+    StopBits = sbOne
+    Device = 'COM1'
+    RcvLineCRLF = False
+    left = 232
+    top = 107
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.hex'
+    Filter = 'Program File|*.hex'
+    left = 312
+    top = 107
+  end
+  object MainMenu1: TMainMenu
+    left = 400
+    top = 107
+    object MIFile: TMenuItem
+      Caption = 'File'
+      object MISearch: TMenuItem
+        Caption = 'Search Hex File'
+        ShortCut = 16463
+        OnClick = MISearchClick
+      end
+    end
+    object MIRun: TMenuItem
+      Caption = 'Run'
+      object MIArduinoIDE: TMenuItem
+        Caption = 'Run Arduino IDE'
+        ShortCut = 123
+        OnClick = MIArduinoIDEClick
+      end
+      object MenuItem6: TMenuItem
+        Caption = '-'
+      end
+      object MIWriteDev: TMenuItem
+        Caption = 'Program PIC Device'
+        ShortCut = 116
+        OnClick = MIWriteDevClick
+      end
+    end
+    object MIConfig: TMenuItem
+      Caption = 'Options'
+      object MISerialDev: TMenuItem
+        Caption = 'Select Serial Port'
+        OnClick = MISerialDevClick
+      end
+      object MIPicDev: TMenuItem
+        Caption = 'Select Device'
+        OnClick = MIPicDevClick
+      end
+      object N5: TMenuItem
+        Caption = '-'
+      end
+      object MIDelay: TMenuItem
+        Caption = 'Select program delay'
+        object MIDelayNone: TMenuItem
+          AutoCheck = True
+          Caption = 'None'
+          Checked = True
+          GroupIndex = 1
+          RadioItem = True
+        end
+        object N3: TMenuItem
+          Caption = '-'
+        end
+        object MIDelay500: TMenuItem
+          AutoCheck = True
+          Caption = '500 mS'
+          GroupIndex = 1
+          RadioItem = True
+        end
+        object MIDelay1700: TMenuItem
+          AutoCheck = True
+          Caption = '1700 mS'
+          GroupIndex = 1
+          RadioItem = True
+        end
+        object MIDelay2000: TMenuItem
+          AutoCheck = True
+          Caption = '2000 mS'
+          GroupIndex = 1
+          RadioItem = True
+        end
+        object MIDelay2500: TMenuItem
+          AutoCheck = True
+          Caption = '2500 mS'
+          GroupIndex = 1
+          RadioItem = True
+        end
+        object MIDelay3000: TMenuItem
+          AutoCheck = True
+          Caption = '3000 mS'
+          GroupIndex = 1
+          RadioItem = True
+        end
+      end
+      object MIDebugLvl: TMenuItem
+        Caption = 'Debug visibility level'
+        object MIDebug0: TMenuItem
+          AutoCheck = True
+          Caption = 'None'
+          GroupIndex = 2
+          RadioItem = True
+        end
+        object MenuItem5: TMenuItem
+          Caption = '-'
+        end
+        object MIDebug1: TMenuItem
+          AutoCheck = True
+          Caption = 'Level 1'
+          GroupIndex = 2
+          RadioItem = True
+        end
+        object MIDebug2: TMenuItem
+          AutoCheck = True
+          Caption = 'Level 2'
+          GroupIndex = 2
+          RadioItem = True
+        end
+        object MIDebug3: TMenuItem
+          AutoCheck = True
+          Caption = 'Level 3'
+          GroupIndex = 2
+          RadioItem = True
+        end
+        object MIDebug4: TMenuItem
+          AutoCheck = True
+          Caption = 'Level 4'
+          Checked = True
+          GroupIndex = 2
+          RadioItem = True
+        end
+      end
+      object MIShowProgram: TMenuItem
+        AutoCheck = True
+        Caption = 'Show actual programming'
+        Checked = True
+        Visible = False
+      end
+      object MIShowCheck: TMenuItem
+        AutoCheck = True
+        Caption = 'Show verification'
+        Checked = True
+        Visible = False
+      end
+      object MenuItem2: TMenuItem
+        Caption = '-'
+        Visible = False
+      end
+      object MINewProg: TMenuItem
+        AutoCheck = True
+        Caption = 'Use new code (EXPERIMENTAL)'
+        Visible = False
+      end
+    end
+    object MIVisual: TMenuItem
+      Caption = 'Visual'
+      object MIShowIn: TMenuItem
+        AutoCheck = True
+        Caption = 'Show command'
+        Checked = True
+      end
+      object MIShowOut: TMenuItem
+        AutoCheck = True
+        Caption = 'Show prompt'
+        Checked = True
+      end
+      object MenuItem4: TMenuItem
+        Caption = '-'
+      end
+      object MIEnableTable: TMenuItem
+        AutoCheck = True
+        Caption = 'Enable device table'
+        Checked = True
+        OnClick = MIEnableTableClick
+      end
+      object MIEnableBar: TMenuItem
+        AutoCheck = True
+        Caption = 'Enable progress bar'
+        Checked = True
+        OnClick = MIEnableBarClick
+      end
+      object MenuItem1: TMenuItem
+        Caption = '-'
+      end
+      object MIAlphaEffect: TMenuItem
+        AutoCheck = True
+        Caption = 'Enable transparency effect'
+        Checked = True
+        OnClick = MIAlphaEffectClick
+      end
+    end
+    object MIMisc: TMenuItem
+      Caption = 'Misc'
+      object MIAbout: TMenuItem
+        Caption = 'About'
+        OnClick = MIAboutClick
+      end
+      object MITerms: TMenuItem
+        Caption = 'Terms of use'
+        OnClick = MITermsClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object MIExternalLinks: TMenuItem
+        Caption = 'Access external links'
+        object MILinkOriginal: TMenuItem
+          Caption = 'Original project - Micro progmeter'
+          OnClick = MILinkOriginalClick
+        end
+      end
+      object N4: TMenuItem
+        Caption = '-'
+      end
+      object MIExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = MIExitClick
+      end
+    end
+  end
+  object TaskDialog1: TTaskDialog
+    Buttons = <>
+    CommonButtons = [tcbOk]
+    RadioButtons = <>
+    left = 312
+    top = 166
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    FileName = 'config.xml'
+    OnRestoreProperties = XMLPropStorage1RestoreProperties
+    left = 400
+    top = 166
+  end
+  object Popup1: TPopupMenu
+    left = 232
+    top = 166
+  end
+end
