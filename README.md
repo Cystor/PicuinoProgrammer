@@ -7,15 +7,16 @@ This application was created in Lazarus on Windows (and in the future for linux 
 
 ![preview](https://user-images.githubusercontent.com/74105086/156858529-0c2b3ac1-662b-43c9-9e55-643fdca54aba.png)
 
-WARNING: Use at your own risk, WE DO NOT PROVIDE GUARANTEE of any kind of malfunction or damage of devices.
+### WARNING:
+Use at your own risk, WE DO NOT PROVIDE GUARANTEE of any kind of malfunction or damage of devices.
 
-Some boards already tested:
+### Some boards already tested:
 - Arduino Nano;
 - Arduino Uno;
 - Arduino Mega 2560;
 - And some "knock-off boards".
 
-Compatible with many PIC devices which has:
+### Compatible with many PIC devices which has:
 - 8-bit processors;
 - Flash program memory;
 - Programming Voltage of 5 volts on MCLR pin.
@@ -24,18 +25,16 @@ Compatible with many PIC devices which has:
 
 ## How to use it?
 
-### test
+### Before anything, you must setup your hardware. [Click here to see how;](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
 
-- Before anything, you must setup your hardware; [Click here to see how.](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
+### You need to upload the sketch to the Arduino;
 
-- You need to upload the sketch to the Arduino;
-
-- Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
+### Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
 - - [pp3.exe](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
 - - [pp3_devices.dat](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
 
-- Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device".
+### Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device".
 
 ## Help us
 
