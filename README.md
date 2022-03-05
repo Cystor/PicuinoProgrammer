@@ -23,14 +23,14 @@ For more about compatibility [click here](https://github.com/jaromir-sukuba/a-p-
 
 ## How to use it?
 
--Before anything, you must setup your hardware. [Click here](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware) to see how.
+- Before anything, you must setup your hardware. [Click here](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware) to see how.
 
--Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
+- Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
 `pp3.exe`
 `pp3_devices.dat`
 
--Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device"
+- Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device"
 
 ## Help us
 
