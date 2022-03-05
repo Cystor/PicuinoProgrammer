@@ -27,7 +27,7 @@ Use at your own risk, WE DO NOT PROVIDE GUARANTEE of any kind of malfunction or 
 
 Before anything, you must setup your hardware. [Click here to see how;](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
 
-You need to upload the sketch to the Arduino;
+You need to upload [this sketch](https://github.com/jaromir-sukuba/a-p-prog/blob/master/fw/pp/pp.ino) to Arduino;
 
 Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
