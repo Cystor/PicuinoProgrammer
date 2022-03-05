@@ -1,4 +1,4 @@
-# PicuinoProgrammer
+# Picuino Programmer
 
 ## What is it?
 
