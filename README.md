@@ -24,19 +24,16 @@ Compatible with many PIC devices which has:
 
 ## How to use it?
 
+### test
+
 - Before anything, you must setup your hardware; [Click here to see how.](https://github.com/jaromir-sukuba/a-p-prog/blob/master/README.md#hardware)
 
 - You need to upload the sketch to the Arduino;
 
 - Within the same folder of "PicuinoProgrammer.exe" must have a folder called "MicroProgmeter" and inside of it must have the following files:
 
-['pp3.exe'](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
-'[pp3_devices.dat]'(https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
-
-`pp3.exe`
-`pp3_devices.dat`
-
-- You can get the files [here](https://github.com/jaromir-sukuba/a-p-prog/tree/master/sw);
+- - [pp3.exe](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3.exe)
+- - [pp3_devices.dat](https://github.com/jaromir-sukuba/a-p-prog/blob/master/sw/pp3_devices.dat)
 
 - Now all you have to do is: search your hex file, select your target device, COM port and click in "Program PIC Device".
 
